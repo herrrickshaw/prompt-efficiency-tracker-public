@@ -1,0 +1,95 @@
+# promptfoo pilot — llm_extract.py (structured extraction w/ citation grounding)
+#
+# What this catches that manual testing doesn't: llm_extract.py builds two
+# different prompt templates (require_citations True/False) and expects the
+# model to return citation-grounded JSON. A prompt-wording change, a schema
+# change, or a provider/model swap can silently break JSON parsing or drop
+# grounding without anyone noticing until a downstream report has a null
+# where a real number should be — the exact "silently X" failure pattern
+# already common in this account's git history.
+#
+# This pilot run already caught a real live bug on its first pass: both
+# GROQ_MODEL (llama-3.3-70b-versatile) and GEMINI_MODEL (gemini-2.0-flash)
+# in ~/.env.local were deprecated/decommissioned by their providers, so
+# extract_structured() was silently failing on every call (fallback masked
+# it as a single generic error). Fixed in ~/.env.local (backup at
+# ~/.env.local.bak-pre-model-fix-2026-09-09): GROQ_MODEL=openai/gpt-oss-120b
+# (Groq's current largest general-purpose model — no other llama chat model
+# remained on this account's Groq catalog; worth a second look if extraction
+# quality regresses), GEMINI_MODEL=gemini-3.6-flash (the exact successor
+# Google's own 404 error named).
+#
+# Run: cd market-pipeline/code/python_files/promptfoo && npx promptfoo eval
+# Needs GROQ_API_KEY (+ GEMINI_API_KEY as fallback) in ~/.env.local, already
+# present for this repo's real "AI Advisor" feature.
+
+description: "llm_extract.py — DRHP + portfolio structured extraction"
+
+providers:
+  - id: file://provider.py
+    label: extract_structured (groq -> gemini fallback)
+
+prompts:
+  - "{{document_text}}"
+
+tests:
+  - description: DRHP filing — issue size, price band, exchange
+    vars:
+      document_text: >-
+        Vantage Cold Chain Logistics Limited proposes to raise up to
+        Rs. 850 crore through a fresh issue of equity shares, with a
+        price band of Rs. 210 to Rs. 222 per equity share of face value
+        Rs. 10 each. The equity shares are proposed to be listed on both
+        BSE and NSE. The issue opens on 14 August and closes on 18 August.
+      extract_config: |
+        {
+          "schema": {
+            "company_name": "string",
+            "issue_size_cr": "number, total issue size in INR crore",
+            "price_band_low": "number",
+            "price_band_high": "number",
+            "listing_exchange": "string, e.g. NSE/BSE/both"
+          },
+          "require_citations": true
+        }
+    assert:
+      - type: is-json
+      - type: javascript
+        value: JSON.parse(output).company_name === "Vantage Cold Chain Logistics Limited"
+      - type: javascript
+        value: JSON.parse(output).issue_size_cr === 850
+      - type: javascript
+        value: |
+          const r = JSON.parse(output);
+          return r.price_band_low === 210 && r.price_band_high === 222;
+      - type: javascript
+        value: |
+          // citation-grounding contract: every extracted field must be
+          // flagged grounded=true, or this feature's whole point (catching
+          // hallucinated financial figures) is silently not working.
+          const r = JSON.parse(output);
+          const g = r._grounding || {};
+          return Object.keys(g).every(k => r[k] === null || g[k].grounded === true);
+
+  - description: Portfolio holdings — array extraction + cash balance
+    vars:
+      document_text: >-
+        Holdings as of statement date: 120 shares of RELIANCE INDUSTRIES LTD
+        purchased at an average price of Rs 2,410.50; 40 shares of TCS at
+        average cost Rs 3,550.00; cash balance Rs 15,230.75.
+      extract_config: |
+        {
+          "schema": {
+            "holdings": "array of {symbol, quantity, avg_price}",
+            "cash_balance": "number"
+          },
+          "require_citations": true
+        }
+    assert:
+      - type: is-json
+      - type: javascript
+        value: |
+          const r = JSON.parse(output);
+          return Array.isArray(r.holdings) && r.holdings.length === 2;
+      - type: javascript
+        value: JSON.parse(output).cash_balance === 15230.75

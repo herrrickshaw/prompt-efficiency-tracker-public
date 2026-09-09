@@ -1,0 +1,97 @@
+# promptfoo pilot — rag/pipeline.py system prompts (SYSTEM_PROMPT + CHECKLIST_SYSTEM_PROMPT)
+#
+# NOT YET LIVE-RUNNABLE: this repo's .env has ANTHROPIC_API_KEY= (present,
+# empty) — checked 2026-09-09, no value set. Structurally complete and
+# ready to run the moment a real key is added; nothing else needed.
+#
+# What this catches: two prompt contracts that are easy to silently break
+# with an innocent-looking prompt edit —
+#   1. every claim must cite a source as [1]/[2]/... (SYSTEM_PROMPT)
+#   2. the checklist variant must render as an ordered list of concrete
+#      steps, not prose (CHECKLIST_SYSTEM_PROMPT)
+#   3. "say so explicitly instead of guessing" when sources don't cover the
+#      question — the actual anti-hallucination contract, tested here with
+#      a question the fixture sources don't answer.
+#
+# Run: cd repos/ship2shore_rag/promptfoo && ANTHROPIC_API_KEY=... npx promptfoo eval
+
+description: "ship2shore_rag — maritime RAG system prompts"
+
+providers:
+  - id: anthropic:messages:claude-sonnet-5
+    label: claude-sonnet-5 (prose mode)
+    config:
+      max_tokens: 1024
+      system: >-
+        You are a maritime shipping domain assistant. Answer ONLY using the numbered
+        sources provided below. Cite sources inline as [1], [2], etc. If the sources
+        don't contain the answer, say so explicitly instead of guessing.
+  - id: anthropic:messages:claude-sonnet-5
+    label: claude-sonnet-5 (checklist mode)
+    config:
+      max_tokens: 1024
+      system: >-
+        You are a maritime shipping domain assistant. Using ONLY the numbered sources
+        provided below, produce an ordered, numbered checklist of concrete steps that
+        answers the question -- the shape a watchkeeper needs, not a prose paragraph.
+        Cite the source for each step inline as [1], [2], etc. If the sources don't
+        contain enough to build a checklist, say so explicitly instead of guessing.
+
+prompts:
+  - "Sources:\n{{sources}}\n\nQuestion: {{question}}"
+
+tests:
+  - description: In-scope question, answerable from the fixture sources — must cite
+    vars:
+      question: "What's the procedure if a fire breaks out in the engine room?"
+      sources: >-
+        [1] Engine Room Fire Response (SOLAS Ch. II-2)
+        On engine room fire alarm: sound the general alarm, stop fuel oil
+        pumps and ventilation to the space, close all engine room openings
+        (skylights, funnel dampers), muster the fire team, and prepare fixed
+        CO2 or foam smothering system for release once the space is
+        confirmed evacuated and sealed.
+    providers: ["claude-sonnet-5 (prose mode)"]
+    assert:
+      - type: contains
+        value: "[1]"
+      - type: llm-rubric
+        value: >-
+          The answer describes the actual engine-room fire procedure from
+          the source (sounding alarm, stopping fuel/ventilation, sealing
+          the space, preparing CO2/foam) rather than a generic fire-safety
+          answer not grounded in the source text.
+
+  - description: Out-of-scope question — must refuse rather than guess
+    vars:
+      question: "What is the current bunker fuel price in Singapore?"
+      sources: >-
+        [1] Engine Room Fire Response (SOLAS Ch. II-2)
+        On engine room fire alarm: sound the general alarm, stop fuel oil
+        pumps and ventilation to the space, close all engine room openings.
+    providers: ["claude-sonnet-5 (prose mode)"]
+    assert:
+      - type: llm-rubric
+        value: >-
+          The response explicitly declines to answer or states the sources
+          don't cover bunker fuel pricing, rather than fabricating a price
+          or an unsupported answer.
+      - type: not-contains
+        value: "$"
+
+  - description: Checklist mode renders an ordered, numbered list of steps
+    vars:
+      question: "What do I do if the engine room catches fire?"
+      sources: >-
+        [1] Engine Room Fire Response (SOLAS Ch. II-2)
+        On engine room fire alarm: sound the general alarm, stop fuel oil
+        pumps and ventilation to the space, close all engine room openings
+        (skylights, funnel dampers), muster the fire team, and prepare fixed
+        CO2 or foam smothering system for release once the space is
+        confirmed evacuated and sealed.
+    providers: ["claude-sonnet-5 (checklist mode)"]
+    assert:
+      - type: regex
+        value: "1\\."
+      - type: contains
+        value: "[1]"

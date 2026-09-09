@@ -1,0 +1,451 @@
+{
+  "evalId": "eval-R8G-2026-09-09T06:47:13",
+  "results": {
+    "version": 3,
+    "timestamp": "2026-09-09T06:47:13.711Z",
+    "prompts": [
+      {
+        "id": "5a32e68875209b04feb7063ea079742fb2f5dc87cceff358a1cb4a51b12f3cac",
+        "raw": "{{document_text}}",
+        "label": "{{document_text}}",
+        "provider": "extract_structured (groq -> gemini fallback)",
+        "metrics": {
+          "score": 2,
+          "testPassCount": 2,
+          "testFailCount": 0,
+          "testErrorCount": 0,
+          "assertPassCount": 8,
+          "assertFailCount": 0,
+          "totalLatencyMs": 8328,
+          "tokenUsage": {
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "total": 0,
+            "numRequests": 2,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            },
+            "assertions": {
+              "total": 0,
+              "prompt": 0,
+              "completion": 0,
+              "cached": 0,
+              "numRequests": 0,
+              "completionDetails": {
+                "reasoning": 0,
+                "acceptedPrediction": 0,
+                "rejectedPrediction": 0,
+                "cacheReadInputTokens": 0,
+                "cacheCreationInputTokens": 0
+              }
+            }
+          },
+          "namedScores": {},
+          "namedScoresCount": {},
+          "namedScoreWeights": {},
+          "cost": 0
+        }
+      }
+    ],
+    "results": [
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "is-json"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "JSON.parse(output).company_name === \"Vantage Cold Chain Logistics Limited\""
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "JSON.parse(output).issue_size_cr === 850"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "const r = JSON.parse(output);\nreturn r.price_band_low === 210 && r.price_band_high === 222;\n"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "// citation-grounding contract: every extracted field must be\n// flagged grounded=true, or this feature's whole point (catching\n// hallucinated financial figures) is silently not working.\nconst r = JSON.parse(output);\nconst g = r._grounding || {};\nreturn Object.keys(g).every(k => r[k] === null || g[k].grounded === true);\n"
+              }
+            }
+          ]
+        },
+        "id": "29d0ec88-b982-4e5f-84f4-a6c1992d3edc",
+        "latencyMs": 3104,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Vantage Cold Chain Logistics Limited proposes to raise up to Rs. 850 crore through a fresh issue of equity shares, with a price band of Rs. 210 to Rs. 222 per equity share of face value Rs. 10 each. The equity shares are proposed to be listed on both BSE and NSE. The issue opens on 14 August and closes on 18 August.",
+          "label": "{{document_text}}",
+          "config": {}
+        },
+        "promptId": "5a32e68875209b04feb7063ea079742fb2f5dc87cceff358a1cb4a51b12f3cac",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://provider.py",
+          "label": "extract_structured (groq -> gemini fallback)"
+        },
+        "response": {
+          "output": "{\"company_name\": \"Vantage Cold Chain Logistics Limited\", \"issue_size_cr\": 850, \"price_band_low\": 210, \"price_band_high\": 222, \"listing_exchange\": \"both\", \"_grounding\": {\"company_name\": {\"grounded\": true, \"span\": \"Vantage Cold Chain Logistics Limited proposes to raise up to Rs. 850 crore through a fresh issue of equity shares, with a price band of Rs. 210 to Rs. 222 per equity share of face value Rs. 10 each.\"}, \"issue_size_cr\": {\"grounded\": true, \"span\": \"Rs. 850 crore\"}, \"price_band_low\": {\"grounded\": true, \"span\": \"Rs. 210\"}, \"price_band_high\": {\"grounded\": true, \"span\": \"Rs. 222\"}, \"listing_exchange\": {\"grounded\": true, \"span\": \"both BSE and NSE\"}}}",
+          "cached": false
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "DRHP filing — issue size, price band, exchange",
+          "vars": {
+            "document_text": "Vantage Cold Chain Logistics Limited proposes to raise up to Rs. 850 crore through a fresh issue of equity shares, with a price band of Rs. 210 to Rs. 222 per equity share of face value Rs. 10 each. The equity shares are proposed to be listed on both BSE and NSE. The issue opens on 14 August and closes on 18 August.",
+            "extract_config": "{\"schema\":{\"company_name\":\"string\",\"issue_size_cr\":\"number, total issue size in INR crore\",\"price_band_low\":\"number\",\"price_band_high\":\"number\",\"listing_exchange\":\"string, e.g. NSE/BSE/both\"},\"require_citations\":true}"
+          },
+          "assert": [
+            {
+              "type": "is-json"
+            },
+            {
+              "type": "javascript",
+              "value": "JSON.parse(output).company_name === \"Vantage Cold Chain Logistics Limited\""
+            },
+            {
+              "type": "javascript",
+              "value": "JSON.parse(output).issue_size_cr === 850"
+            },
+            {
+              "type": "javascript",
+              "value": "const r = JSON.parse(output);\nreturn r.price_band_low === 210 && r.price_band_high === 222;\n"
+            },
+            {
+              "type": "javascript",
+              "value": "// citation-grounding contract: every extracted field must be\n// flagged grounded=true, or this feature's whole point (catching\n// hallucinated financial figures) is silently not working.\nconst r = JSON.parse(output);\nconst g = r._grounding || {};\nreturn Object.keys(g).every(k => r[k] === null || g[k].grounded === true);\n"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 0,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "document_text": "Vantage Cold Chain Logistics Limited proposes to raise up to Rs. 850 crore through a fresh issue of equity shares, with a price band of Rs. 210 to Rs. 222 per equity share of face value Rs. 10 each. The equity shares are proposed to be listed on both BSE and NSE. The issue opens on 14 August and closes on 18 August.",
+          "extract_config": "{\"schema\":{\"company_name\":\"string\",\"issue_size_cr\":\"number, total issue size in INR crore\",\"price_band_low\":\"number\",\"price_band_high\":\"number\",\"listing_exchange\":\"string, e.g. NSE/BSE/both\"},\"require_citations\":true}"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      },
+      {
+        "cost": 0,
+        "gradingResult": {
+          "pass": true,
+          "score": 1,
+          "reason": "All assertions passed",
+          "namedScores": {},
+          "tokensUsed": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0
+          },
+          "componentResults": [
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "is-json"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "const r = JSON.parse(output);\nreturn Array.isArray(r.holdings) && r.holdings.length === 2;\n"
+              }
+            },
+            {
+              "pass": true,
+              "score": 1,
+              "reason": "Assertion passed",
+              "assertion": {
+                "type": "javascript",
+                "value": "JSON.parse(output).cash_balance === 15230.75"
+              }
+            }
+          ]
+        },
+        "id": "f9cf017c-8a33-40e5-a7f1-e7ce9f1b5df5",
+        "latencyMs": 5224,
+        "namedScores": {},
+        "prompt": {
+          "raw": "Holdings as of statement date: 120 shares of RELIANCE INDUSTRIES LTD purchased at an average price of Rs 2,410.50; 40 shares of TCS at average cost Rs 3,550.00; cash balance Rs 15,230.75.",
+          "label": "{{document_text}}",
+          "config": {}
+        },
+        "promptId": "5a32e68875209b04feb7063ea079742fb2f5dc87cceff358a1cb4a51b12f3cac",
+        "promptIdx": 0,
+        "provider": {
+          "id": "file://provider.py",
+          "label": "extract_structured (groq -> gemini fallback)"
+        },
+        "response": {
+          "output": "{\"holdings\": [{\"symbol\": \"RELIANCE INDUSTRIES LTD\", \"quantity\": 120, \"avg_price\": 2410.5}, {\"symbol\": \"TCS\", \"quantity\": 40, \"avg_price\": 3550.0}], \"cash_balance\": 15230.75, \"_grounding\": {\"holdings\": {\"grounded\": true, \"span\": \"120 shares of RELIANCE INDUSTRIES LTD purchased at an average price of Rs 2,410.50; 40 shares of TCS at average cost Rs 3,550.00\"}, \"cash_balance\": {\"grounded\": true, \"span\": \"cash balance Rs 15,230.75\"}}}",
+          "cached": false
+        },
+        "score": 1,
+        "success": true,
+        "testCase": {
+          "description": "Portfolio holdings — array extraction + cash balance",
+          "vars": {
+            "document_text": "Holdings as of statement date: 120 shares of RELIANCE INDUSTRIES LTD purchased at an average price of Rs 2,410.50; 40 shares of TCS at average cost Rs 3,550.00; cash balance Rs 15,230.75.",
+            "extract_config": "{\"schema\":{\"holdings\":\"array of {symbol, quantity, avg_price}\",\"cash_balance\":\"number\"},\"require_citations\":true}"
+          },
+          "assert": [
+            {
+              "type": "is-json"
+            },
+            {
+              "type": "javascript",
+              "value": "const r = JSON.parse(output);\nreturn Array.isArray(r.holdings) && r.holdings.length === 2;\n"
+            },
+            {
+              "type": "javascript",
+              "value": "JSON.parse(output).cash_balance === 15230.75"
+            }
+          ],
+          "options": {},
+          "metadata": {}
+        },
+        "testIdx": 1,
+        "tokenUsage": {
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "total": 0,
+          "numRequests": 1,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          },
+          "assertions": {
+            "total": 0,
+            "prompt": 0,
+            "completion": 0,
+            "cached": 0,
+            "numRequests": 0,
+            "completionDetails": {
+              "reasoning": 0,
+              "acceptedPrediction": 0,
+              "rejectedPrediction": 0,
+              "cacheReadInputTokens": 0,
+              "cacheCreationInputTokens": 0
+            }
+          }
+        },
+        "vars": {
+          "document_text": "Holdings as of statement date: 120 shares of RELIANCE INDUSTRIES LTD purchased at an average price of Rs 2,410.50; 40 shares of TCS at average cost Rs 3,550.00; cash balance Rs 15,230.75.",
+          "extract_config": "{\"schema\":{\"holdings\":\"array of {symbol, quantity, avg_price}\",\"cash_balance\":\"number\"},\"require_citations\":true}"
+        },
+        "metadata": {
+          "_promptfooFileMetadata": {}
+        },
+        "failureReason": 0
+      }
+    ],
+    "stats": {
+      "successes": 2,
+      "failures": 0,
+      "errors": 0,
+      "tokenUsage": {
+        "prompt": 0,
+        "completion": 0,
+        "cached": 0,
+        "total": 0,
+        "numRequests": 2,
+        "completionDetails": {
+          "reasoning": 0,
+          "acceptedPrediction": 0,
+          "rejectedPrediction": 0,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0
+        },
+        "assertions": {
+          "total": 0,
+          "prompt": 0,
+          "completion": 0,
+          "cached": 0,
+          "numRequests": 0,
+          "completionDetails": {
+            "reasoning": 0,
+            "acceptedPrediction": 0,
+            "rejectedPrediction": 0,
+            "cacheReadInputTokens": 0,
+            "cacheCreationInputTokens": 0
+          }
+        }
+      },
+      "durationMs": 5238,
+      "evaluationDurationMs": 5238
+    }
+  },
+  "config": {
+    "description": "llm_extract.py — DRHP + portfolio structured extraction",
+    "prompts": [
+      "{{document_text}}"
+    ],
+    "providers": [
+      {
+        "id": "file://provider.py",
+        "label": "extract_structured (groq -> gemini fallback)"
+      }
+    ],
+    "tests": [
+      {
+        "description": "DRHP filing — issue size, price band, exchange",
+        "vars": {
+          "document_text": "Vantage Cold Chain Logistics Limited proposes to raise up to Rs. 850 crore through a fresh issue of equity shares, with a price band of Rs. 210 to Rs. 222 per equity share of face value Rs. 10 each. The equity shares are proposed to be listed on both BSE and NSE. The issue opens on 14 August and closes on 18 August.",
+          "extract_config": "{\"schema\":{\"company_name\":\"string\",\"issue_size_cr\":\"number, total issue size in INR crore\",\"price_band_low\":\"number\",\"price_band_high\":\"number\",\"listing_exchange\":\"string, e.g. NSE/BSE/both\"},\"require_citations\":true}"
+        },
+        "assert": [
+          {
+            "type": "is-json"
+          },
+          {
+            "type": "javascript",
+            "value": "JSON.parse(output).company_name === \"Vantage Cold Chain Logistics Limited\""
+          },
+          {
+            "type": "javascript",
+            "value": "JSON.parse(output).issue_size_cr === 850"
+          },
+          {
+            "type": "javascript",
+            "value": "const r = JSON.parse(output);\nreturn r.price_band_low === 210 && r.price_band_high === 222;\n"
+          },
+          {
+            "type": "javascript",
+            "value": "// citation-grounding contract: every extracted field must be\n// flagged grounded=true, or this feature's whole point (catching\n// hallucinated financial figures) is silently not working.\nconst r = JSON.parse(output);\nconst g = r._grounding || {};\nreturn Object.keys(g).every(k => r[k] === null || g[k].grounded === true);\n"
+          }
+        ]
+      },
+      {
+        "description": "Portfolio holdings — array extraction + cash balance",
+        "vars": {
+          "document_text": "Holdings as of statement date: 120 shares of RELIANCE INDUSTRIES LTD purchased at an average price of Rs 2,410.50; 40 shares of TCS at average cost Rs 3,550.00; cash balance Rs 15,230.75.",
+          "extract_config": "{\"schema\":{\"holdings\":\"array of {symbol, quantity, avg_price}\",\"cash_balance\":\"number\"},\"require_citations\":true}"
+        },
+        "assert": [
+          {
+            "type": "is-json"
+          },
+          {
+            "type": "javascript",
+            "value": "const r = JSON.parse(output);\nreturn Array.isArray(r.holdings) && r.holdings.length === 2;\n"
+          },
+          {
+            "type": "javascript",
+            "value": "JSON.parse(output).cash_balance === 15230.75"
+          }
+        ]
+      }
+    ],
+    "outputPath": [
+      "results.json"
+    ],
+    "extensions": []
+  },
+  "shareableUrl": null,
+  "metadata": {
+    "promptfooVersion": "0.122.2",
+    "nodeVersion": "v26.8.1",
+    "platform": "darwin",
+    "arch": "arm64",
+    "exportedAt": "2026-09-09T06:47:19.207Z",
+    "evaluationCreatedAt": "2026-09-09T06:47:13.711Z"
+  },
+  "vars": [
+    "document_text",
+    "extract_config"
+  ],
+  "runtimeOptions": {
+    "eventSource": "cli",
+    "showProgressBar": true,
+    "repeat": 1,
+    "maxConcurrency": 4,
+    "cache": false
+  }
+}
