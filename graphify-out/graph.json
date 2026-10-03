@@ -1,0 +1,1218 @@
+{
+  "hyperedges": [],
+  "input_tokens": 0,
+  "output_tokens": 0,
+  "nodes": [
+    {
+      "id": "hooks_claude_code_usage_hook",
+      "label": "claude-code-usage-hook.py",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_price_for",
+      "label": "_price_for()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L44",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_estimate_cost",
+      "label": "_estimate_cost()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L52",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_state_key",
+      "label": "_state_key()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L62",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_load_state",
+      "label": "_load_state()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L68",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_save_state",
+      "label": "_save_state()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L77",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_has_tool_error",
+      "label": "_has_tool_error()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L88",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_iter_assistant_usage",
+      "label": "_iter_assistant_usage()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L100",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_write_alert",
+      "label": "_write_alert()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L139",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_infer_market",
+      "label": "_infer_market()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L154",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L170",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_rationale_2",
+      "label": "RUFLO — Claude Code token-usage feeder hook. Wired into Claude Code as a Stop /…",
+      "file_type": "rationale",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_rationale_89",
+      "label": "True if this transcript line carries a tool_result marked is_error.",
+      "file_type": "rationale",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L89",
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_rationale_101",
+      "label": "Yield (msg_id, model, usage_dict, ts, had_tool_error) for assistant messages…",
+      "file_type": "rationale",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L101",
+      "_origin": "ast"
+    },
+    {
+      "id": "hooks_claude_code_usage_hook_rationale_155",
+      "label": "Best-effort repo/project attribution: git toplevel dir name, else cwd basename.",
+      "file_type": "rationale",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L155",
+      "_origin": "ast"
+    },
+    {
+      "id": "promptfoo_market_pipeline_provider",
+      "label": "provider.py",
+      "file_type": "code",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "promptfoo_market_pipeline_provider_call_api",
+      "label": "call_api()",
+      "file_type": "code",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L19",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "promptfoo_market_pipeline_provider_rationale_1",
+      "label": "promptfoo custom Python provider wrapping llm_extract.extract_structured().…",
+      "file_type": "rationale",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check",
+      "label": "heartbeat_check.py",
+      "file_type": "code",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_hooks_wired",
+      "label": "_hooks_wired()",
+      "file_type": "code",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L30",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_db_freshness",
+      "label": "_db_freshness()",
+      "file_type": "code",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L51",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_notify",
+      "label": "_notify()",
+      "file_type": "code",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L100",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_log",
+      "label": "_log()",
+      "file_type": "code",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L108",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_main",
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L114",
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_rationale_2",
+      "label": "RUFLO — token-tracking heartbeat. Checks the two ways the token/outcome tracker…",
+      "file_type": "rationale",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_rationale_31",
+      "label": "True if Stop AND SubagentStop both point at the usage hook script.",
+      "file_type": "rationale",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L31",
+      "_origin": "ast"
+    },
+    {
+      "id": "scripts_heartbeat_check_rationale_52",
+      "label": "(is_stale, detail) — stale means the last row is older than the threshold AND…",
+      "file_type": "rationale",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L52",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog",
+      "label": "CHANGELOG.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_changelog",
+      "label": "Changelog",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_1_0_0_2026_09_09_initial_release_p0_outcome_tracking_p1_promptfoo_pilots",
+      "label": "[1.0.0] — 2026-09-09 — Initial release: P0 outcome tracking + P1 promptfoo pilots",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_added",
+      "label": "Added",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_fixed_in_other_repos_referenced_here",
+      "label": "Fixed (in other repos, referenced here)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L12",
+      "_origin": "ast"
+    },
+    {
+      "id": "changelog_housekeeping",
+      "label": "Housekeeping",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_prompt_efficiency_tracker",
+      "label": "prompt-efficiency-tracker",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_what_s_in_here",
+      "label": "What's in here",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_bugs_the_promptfoo_pilot_caught_on_its_first_real_run",
+      "label": "Bugs the promptfoo pilot caught on its first real run",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_qmd_cleanup_2026_09_09",
+      "label": "qmd cleanup (2026-09-09)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_reuse_elsewhere",
+      "label": "Reuse elsewhere",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09",
+      "label": "prompt_token_outcome_audit_2026-09-09.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "label": "Prompt / Token / Outcome Audit — 2026-09-09",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_headline_numbers",
+      "label": "Headline numbers",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_1_the_tracking_infrastructure_measures_cost_not_outcome",
+      "label": "1. The tracking infrastructure measures cost, not outcome",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L17",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_2_headroom_real_but_not_where_you_d_think",
+      "label": "2. Headroom: real, but not where you'd think",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_3_the_real_outcome_ledger_is_git_history_not_a_database",
+      "label": "3. The real outcome ledger is git history, not a database",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L37",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_4_fix_feat_ratio_portfolio_wide_repos_with_real_local_git_history",
+      "label": "4. Fix : feat ratio, portfolio-wide (repos with real local git history)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L54",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_5_coverage_gaps_caught_mid_audit",
+      "label": "5. Coverage gaps, caught mid-audit",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L69",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_6_websites_other_systems",
+      "label": "6. Websites & other systems",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L73",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_7_tool_survey_self_hosted_only_given_private_trading_financial_repos",
+      "label": "7. Tool survey (self-hosted only, given private trading/financial repos)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L79",
+      "_origin": "ast"
+    },
+    {
+      "id": "reports_prompt_token_outcome_audit_2026_09_09_8_sprint_backlog",
+      "label": "8. Sprint backlog",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L97",
+      "_origin": "ast"
+    }
+  ],
+  "links": [
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hashlib",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "sqlite3",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_price_for",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_estimate_cost",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_state_key",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_load_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_save_state",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_has_tool_error",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_iter_assistant_usage",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_write_alert",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_infer_market",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L154",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook",
+      "target": "hooks_claude_code_usage_hook_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L170",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_estimate_cost",
+      "target": "hooks_claude_code_usage_hook_price_for",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_iter_assistant_usage",
+      "target": "hooks_claude_code_usage_hook_has_tool_error",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L120",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_infer_market",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L182",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_state_key",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_load_state",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_iter_assistant_usage",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L191",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_estimate_cost",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L203",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_save_state",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_main",
+      "target": "hooks_claude_code_usage_hook_write_alert",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L246",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_rationale_2",
+      "target": "hooks_claude_code_usage_hook",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_rationale_89",
+      "target": "hooks_claude_code_usage_hook_has_tool_error",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_rationale_101",
+      "target": "hooks_claude_code_usage_hook_iter_assistant_usage",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "hooks_claude_code_usage_hook_rationale_155",
+      "target": "hooks_claude_code_usage_hook_infer_market",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "hooks/claude-code-usage-hook.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "promptfoo_market_pipeline_provider",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "promptfoo_market_pipeline_provider",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "promptfoo_market_pipeline_provider",
+      "target": "pathlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "promptfoo_market_pipeline_provider",
+      "target": "llm_extract",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "promptfoo_market_pipeline_provider",
+      "target": "promptfoo_market_pipeline_provider_call_api",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "promptfoo_market_pipeline_provider_rationale_1",
+      "target": "promptfoo_market_pipeline_provider",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "promptfoo/market-pipeline/provider.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "sqlite3",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "subprocess",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "sys",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "datetime",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "scripts_heartbeat_check_hooks_wired",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "scripts_heartbeat_check_db_freshness",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "scripts_heartbeat_check_notify",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "scripts_heartbeat_check_log",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check",
+      "target": "scripts_heartbeat_check_main",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_main",
+      "target": "scripts_heartbeat_check_hooks_wired",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_main",
+      "target": "scripts_heartbeat_check_db_freshness",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_main",
+      "target": "scripts_heartbeat_check_log",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L132",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_main",
+      "target": "scripts_heartbeat_check_notify",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L135",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_rationale_2",
+      "target": "scripts_heartbeat_check",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_rationale_31",
+      "target": "scripts_heartbeat_check_hooks_wired",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "scripts_heartbeat_check_rationale_52",
+      "target": "scripts_heartbeat_check_db_freshness",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/heartbeat_check.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog",
+      "target": "changelog_changelog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_1_0_0_2026_09_09_initial_release_p0_outcome_tracking_p1_promptfoo_pilots",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_1_0_0_2026_09_09_initial_release_p0_outcome_tracking_p1_promptfoo_pilots",
+      "target": "changelog_added",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_1_0_0_2026_09_09_initial_release_p0_outcome_tracking_p1_promptfoo_pilots",
+      "target": "changelog_fixed_in_other_repos_referenced_here",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "changelog_1_0_0_2026_09_09_initial_release_p0_outcome_tracking_p1_promptfoo_pilots",
+      "target": "changelog_housekeeping",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "readme_prompt_efficiency_tracker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_prompt_efficiency_tracker",
+      "target": "readme_what_s_in_here",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_prompt_efficiency_tracker",
+      "target": "readme_bugs_the_promptfoo_pilot_caught_on_its_first_real_run",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_prompt_efficiency_tracker",
+      "target": "readme_qmd_cleanup_2026_09_09",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_prompt_efficiency_tracker",
+      "target": "readme_reuse_elsewhere",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_headline_numbers",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_1_the_tracking_infrastructure_measures_cost_not_outcome",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_2_headroom_real_but_not_where_you_d_think",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_3_the_real_outcome_ledger_is_git_history_not_a_database",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_4_fix_feat_ratio_portfolio_wide_repos_with_real_local_git_history",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_5_coverage_gaps_caught_mid_audit",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_6_websites_other_systems",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_7_tool_survey_self_hosted_only_given_private_trading_financial_repos",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "reports_prompt_token_outcome_audit_2026_09_09_prompt_token_outcome_audit_2026_09_09",
+      "target": "reports_prompt_token_outcome_audit_2026_09_09_8_sprint_backlog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "reports/prompt_token_outcome_audit_2026-09-09.md",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_origin": "ast"
+    }
+  ],
+  "directed": false
+}

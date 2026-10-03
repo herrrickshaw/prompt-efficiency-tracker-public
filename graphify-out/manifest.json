@@ -1,0 +1,56 @@
+{
+  "hooks/claude-code-usage-hook.py": {
+    "mtime": 1788936494.9920928,
+    "seen": 1789193319.825252,
+    "ast_hash": "823b7d98efe5633a47155e5f48a233b6",
+    "semantic_hash": ""
+  },
+  "promptfoo/market-pipeline/provider.py": {
+    "mtime": 1788936495.0125976,
+    "seen": 1789193319.825255,
+    "ast_hash": "7e3a65d594096417b806ce32994c732c",
+    "semantic_hash": ""
+  },
+  "promptfoo/market-pipeline/results-2026-09-09.json": {
+    "mtime": 1788936548.354797,
+    "seen": 1789193319.825257,
+    "ast_hash": "73ca96b69e8e9476a70ba23d3589f267",
+    "semantic_hash": ""
+  },
+  "scripts/heartbeat_check.py": {
+    "mtime": 1788936494.9999244,
+    "seen": 1789193319.825257,
+    "ast_hash": "c4891723c47907bf2d0903b26659d064",
+    "semantic_hash": ""
+  },
+  "CHANGELOG.md": {
+    "mtime": 1788936543.3232174,
+    "seen": 1789193319.825258,
+    "ast_hash": "625e14e8d1c9e1f2ae1f5f1eaf924593",
+    "semantic_hash": ""
+  },
+  "README.md": {
+    "mtime": 1788936534.6049452,
+    "seen": 1789193319.825259,
+    "ast_hash": "26c0e974856f3d5e94aac334ac5cc42c",
+    "semantic_hash": ""
+  },
+  "promptfoo/market-pipeline/promptfooconfig.yaml": {
+    "mtime": 1788936495.0092566,
+    "seen": 1789193319.82526,
+    "ast_hash": "6b57f7dcccb5d4e12d09b849f724f555",
+    "semantic_hash": ""
+  },
+  "promptfoo/ship2shore-rag/promptfooconfig.yaml": {
+    "mtime": 1788936495.0152082,
+    "seen": 1789193319.825261,
+    "ast_hash": "645f17a908ac9fadf45b541522c4351a",
+    "semantic_hash": ""
+  },
+  "reports/prompt_token_outcome_audit_2026-09-09.md": {
+    "mtime": 1788936495.0190926,
+    "seen": 1789193319.825261,
+    "ast_hash": "3daaca4bb90cd4eaa064e3a1c76815b5",
+    "semantic_hash": ""
+  }
+}
