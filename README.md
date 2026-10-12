@@ -1,5 +1,9 @@
 # prompt-efficiency-tracker
 
+<!-- how-to-use-with-ai -->
+> **New here?** See [How to use this repo with AI (Claude, Gemini, ChatGPT)](HOW_TO_USE_WITH_AI.md) — clone it, paste it into an AI tool, and ask in plain English.
+
+
 Real outcome/attribution tracking for Claude Code usage across this account, plus prompt-regression testing for the LLM calls buried inside a few of the other repos here. Built after a 2026-09-09 audit found the existing token tracker (`~/.ruflo/data/token_usage.db`, fed by a homegrown hook) recorded volume and cost fine but had **zero real outcome signal**: its `status` column was hardcoded to the literal string `"success"`, `market`/`task_name` were blank or generic on every row, and the hook that fed it had been silently dropped from `~/.claude/settings.json` for a month with nothing noticing.
 
 Full narrative report: [`reports/prompt_token_outcome_audit_2026-09-09.md`](reports/prompt_token_outcome_audit_2026-09-09.md).
