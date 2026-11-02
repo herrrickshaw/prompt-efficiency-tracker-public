@@ -9,13 +9,13 @@ language what you want to do.
 ## 1. Get the code
 
 ```bash
-git clone https://github.com/herrrickshaw/prompt-efficiency-tracker.git
-cd prompt-efficiency-tracker
+git clone https://github.com/herrrickshaw/prompt-efficiency-tracker-public.git
+cd prompt-efficiency-tracker-public
 ```
 
 No git? Click the green **Code** button on the repo page, choose **Download ZIP**, and unzip it.
 
-You will usually need Python 3.10+ (`python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt`, if a requirements file exists).
+You will usually need Python 3.9+ (`python3 -m venv .venv && source .venv/bin/activate && pip install -e ".[dev]"`).
 
 ## 2. Give it to an AI
 
@@ -23,9 +23,9 @@ Pick whichever fits you:
 
 | Option | How |
 |---|---|
-| **Claude Code / Gemini CLI** (best: the AI can read and run the whole repo) | Run `claude` or `gemini` inside the cloned `prompt-efficiency-tracker` folder, then type your question. |
+| **Claude Code / Gemini CLI** (best: the AI can read and run the whole repo) | Run `claude` or `gemini` inside the cloned `prompt-efficiency-tracker-public` folder, then type your question. |
 | **Claude.ai / Gemini / ChatGPT in the browser** | Upload `README.md` and the files you care about (or paste their contents), then ask. For a quick overview, paste the output of `git ls-files` too. |
-| **GitHub URL** | Paste `https://github.com/herrrickshaw/prompt-efficiency-tracker` and ask the AI to read it (works only if your AI tool can browse the web; otherwise upload files). |
+| **GitHub URL** | Paste `https://github.com/herrrickshaw/prompt-efficiency-tracker-public` and ask the AI to read it (works only if your AI tool can browse the web; otherwise upload files). |
 
 Tip: start with the README. If the repo is large, tell the AI which folder or file to focus on instead of pasting everything.
 

@@ -2,6 +2,27 @@
 
 Guidance for Claude Code sessions working in this repository.
 
+## What this repo is
+Public snapshot (2026-09) of a private tool: a Claude Code `Stop`/`SubagentStop` hook that feeds
+`~/.ruflo/data/token_usage.db`, a heartbeat that checks the tracking is alive, and two promptfoo
+prompt-regression configs. See `README.md` for the pipeline table; keep both files consistent.
+
+## Commands
+```bash
+python3 -m venv .venv && source .venv/bin/activate && pip install -e ".[dev]"
+pytest -q          # offline; every test redirects $HOME-derived paths to a temp dir
+ruff check .       # config in pyproject.toml, target py39
+```
+
+## Rules
+- Behaviour-preserving edits only: both scripts must keep exiting 0 on every path, and the hook's
+  dedup (transcript-hash state file + unique index on `msg_id`) must not change.
+- `graphify-out/` and `promptfoo/market-pipeline/results-*.json` are generated; never hand-edit.
+- `promptfoo/market-pipeline/provider.py` imports `llm_extract` from the `market-pipeline` repo; it
+  is not importable here — stub it in tests (see `tests/test_provider.py`).
+- Never commit keys. `GROQ_API_KEY`, `GEMINI_API_KEY`, `ANTHROPIC_API_KEY` come from the environment
+  of the repo the promptfoo configs run in.
+
 <!-- source-fetch-toolkit:v1 (managed by ~/bin/add_source_fetch_section.py — edit there, not here) -->
 ## Source fetching for data collection & literature surveys
 
