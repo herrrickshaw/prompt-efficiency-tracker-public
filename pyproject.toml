@@ -8,6 +8,10 @@ dependencies = []
 [project.optional-dependencies]
 dev = ["pytest>=7", "ruff>=0.5"]
 
+[tool.setuptools]
+# scripts-only repo: nothing to package, but `pip install -e ".[dev]"` must not auto-discover hooks/launchd/promptfoo
+py-modules = []
+
 [tool.ruff]
 target-version = "py39"
 line-length = 120
