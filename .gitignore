@@ -3,3 +3,6 @@
 __pycache__/
 node_modules/
 .promptfoo/
+.venv/
+.pytest_cache/
+.ruff_cache/
