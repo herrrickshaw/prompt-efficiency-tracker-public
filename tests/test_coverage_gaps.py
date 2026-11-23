@@ -58,6 +58,9 @@ def test_newest_transcript_mtime_picks_the_newest_jsonl_only(heartbeat, tmp_path
     os.utime(old, (1000, 1000))
     os.utime(new, (2000, 2000))
     os.utime(other, (9000, 9000))  # not a transcript: must not count
+    near = proj / "a" / "notes.yaml.l"  # shares the trailing "l" but is not .jsonl
+    near.write_text("x")
+    os.utime(near, (9500, 9500))
     assert heartbeat._newest_transcript_mtime(str(proj)) == 2000
 
 
